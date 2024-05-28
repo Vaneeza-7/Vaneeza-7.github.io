@@ -1,5 +1,5 @@
-# shaistaaman.github.io
+# vaneezaahmad.github.io
 
 Thanks for visiting my site
 
-<a href="https://shaistaaman.github.io/"> Shaista Aman CV</a>
+<a href="https://vaneezaahmad.github.io/"> Vaneeza Ahmad CV</a>
