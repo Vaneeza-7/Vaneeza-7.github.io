@@ -15,19 +15,19 @@ Welcome to the guide on how I built my personal portfolio. This document will wa
 
 ### Project Setup
 
-1. **Creating the Repository**: I started by creating a new repository on GitHub named `vaneezaahmad.github.io`. This name ensures that GitHub Pages will host my portfolio.
+1. **Creating the Repository**: I started by creating a new repository on GitHub named `vaneeza-7.github.io`. This name ensures that GitHub Pages will host my portfolio.
    
      <i>Note: Please make sure that you write your own username, like this `yourusername.github.io`</i>
    
 
 3. **Cloning the Repository**: I cloned the repository to my local machine using the command:
     ```sh
-    git clone https://github.com/Vaneeza-7/vaneezaahmad.github.io.git
+    git clone https://github.com/Vaneeza-7/vaneeza-7.github.io.git
     ```
 
 4. **Setting Up the Project Structure**: I created the basic folder structure:
     ```
-    vaneezaahmad.github.io/
+    vaneeza-7.github.io/
     ├── index.html
     ├── css/
     │   └── styles.css
