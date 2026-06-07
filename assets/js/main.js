@@ -169,40 +169,40 @@
   }
 
   /**
-   * Porfolio isotope and filter
+   * AI/ML Projects isotope and filter
    */
   window.addEventListener('load', () => {
-    let portfolioContainer = select('.portfolio-container');
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item'
+    let projectsContainer = select('.projects-container');
+    if (projectsContainer) {
+      let projectsIsotope = new Isotope(projectsContainer, {
+        itemSelector: '.project-item',
+        layoutMode: 'fitRows'
       });
 
-      let portfolioFilters = select('#portfolio-flters li', true);
+      let projectsFilters = select('#projects-filters li', true);
 
-      on('click', '#portfolio-flters li', function(e) {
+      on('click', '#projects-filters li', function(e) {
         e.preventDefault();
-        portfolioFilters.forEach(function(el) {
+        projectsFilters.forEach(function(el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
 
-        portfolioIsotope.arrange({
+        projectsIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
-        portfolioIsotope.on('arrangeComplete', function() {
-          AOS.refresh()
+        projectsIsotope.on('arrangeComplete', function() {
+          AOS.refresh();
         });
       }, true);
     }
-
   });
 
   /**
-   * Initiate portfolio lightbox 
+   * Gallery lightbox
    */
-  const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
+  const galleryLightbox = GLightbox({
+    selector: '.gallery-lightbox'
   });
 
   /**
