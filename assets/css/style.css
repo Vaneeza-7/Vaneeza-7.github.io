@@ -354,6 +354,17 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.about .about-img-wrap {
+  display: flex;
+}
+.about .about-img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+}
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
@@ -1047,4 +1058,272 @@ section {
 }
 #footer .credits {
   font-size: 13px;
+}
+
+/*--------------------------------------------------------------
+# AI/ML Projects Section
+--------------------------------------------------------------*/
+.projects-filters {
+  padding: 0;
+  margin: 0 auto 25px auto;
+  list-style: none;
+  text-align: center;
+  background: #fff;
+  border-radius: 50px;
+  padding: 4px 15px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.07);
+}
+.projects-filters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #45505b;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  letter-spacing: 0.4px;
+}
+.projects-filters li:hover,
+.projects-filters li.filter-active {
+  background: #0563bb;
+  color: #fff;
+}
+
+/* Project Cards */
+.ai-project-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+.ai-project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 40px rgba(5,99,187,0.15);
+}
+
+.project-img-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+}
+.project-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.ai-project-card:hover .project-img-wrap img {
+  transform: scale(1.05);
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 30, 60, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.ai-project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.btn-project-github {
+  background: #fff;
+  color: #0563bb;
+  border-radius: 50px;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  letter-spacing: 0.3px;
+}
+.btn-project-github:hover {
+  background: #0563bb;
+  color: #fff;
+}
+.btn-project-github i {
+  font-size: 18px;
+}
+
+.btn-project-nda {
+  background: rgba(255,255,255,0.15);
+  border: 1.5px solid rgba(255,255,255,0.5);
+  color: #fff;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  letter-spacing: 0.3px;
+}
+.btn-project-nda i { font-size: 16px; }
+
+.project-body {
+  padding: 18px 20px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.badge-cat {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+.badge-voice  { background: rgba(6,152,190,0.12); color: #0698be; border: 1px solid rgba(6,152,190,0.25); }
+.badge-rag    { background: rgba(117,50,210,0.11); color: #7532d2; border: 1px solid rgba(117,50,210,0.25); }
+.badge-mlops  { background: rgba(16,168,100,0.11); color: #10a864; border: 1px solid rgba(16,168,100,0.25); }
+.badge-ml     { background: rgba(232,110,50,0.11); color: #e86e32; border: 1px solid rgba(232,110,50,0.25); }
+.badge-award  { background: rgba(255,185,0,0.14);  color: #c97c00; border: 1px solid rgba(255,185,0,0.3); }
+.badge-metric { background: rgba(5,99,187,0.10);   color: #0563bb; border: 1px solid rgba(5,99,187,0.25); }
+
+.project-body h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+.project-body p {
+  font-size: 13.5px;
+  color: #5a6474;
+  line-height: 1.6;
+  flex: 1;
+  margin-bottom: 12px;
+}
+
+.project-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: auto;
+}
+.project-tech-tags span {
+  background: #f1f4f8;
+  color: #45505b;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+/*--------------------------------------------------------------
+# Memory Lane Gallery Section
+--------------------------------------------------------------*/
+.gallery {
+  background: #f7f8f9;
+}
+
+.gallery-container {
+  gap: 0;
+}
+
+.gallery-item {
+  padding: 8px;
+}
+
+.gallery-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 3px 18px rgba(0,0,0,0.09);
+  cursor: pointer;
+}
+.gallery-wrap img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  background: #eef1f4;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.gallery-wrap:hover img {
+  transform: scale(1.07);
+}
+
+.gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(5,20,50,0.88) 0%, rgba(5,20,50,0) 100%);
+  padding: 40px 16px 14px;
+  transform: translateY(8px);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.gallery-wrap:hover .gallery-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+.gallery-caption h5 {
+  color: #fff;
+  font-size: 13.5px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.gallery-caption p {
+  color: rgba(255,255,255,0.82);
+  font-size: 12px;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.gallery-note {
+  color: #888;
+  font-size: 13px;
+  margin-top: 8px;
+}
+.gallery-note code {
+  background: #eef1f5;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #0563bb;
+}
+
+/*--------------------------------------------------------------
+# NovaSphere resume sub-headers
+--------------------------------------------------------------*/
+.resume .resume-item p[style*="0.85rem"] {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  border-left: 3px solid #0563bb;
+  padding-left: 8px;
+  margin-top: 14px !important;
 }
